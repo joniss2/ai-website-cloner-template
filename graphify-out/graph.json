@@ -1,7 +1,90 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {},
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "multi_platform_skill_distribution",
+        "label": "Multi-Platform Clone-Website Skill Distribution",
+        "nodes": [
+          "github_skills_clone_website_skill_md_clone_website_skill",
+          "opencode_commands_clone_website_md_clone_website_command",
+          "windsurf_workflows_clone_website_md_clone_website_workflow"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": ".opencode/commands/clone-website.md"
+      },
+      {
+        "id": "agent_instructions_single_source_of_truth",
+        "label": "Agent Instructions Single Source of Truth (AGENTS.md)",
+        "nodes": [
+          "agents_md_agent_instructions",
+          "claude_md_claude_config",
+          "gemini_md_gemini_config"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "AGENTS.md"
+      },
+      {
+        "id": "platform_rule_files_from_agents_md",
+        "label": "Platform Rule Files Auto-Generated from AGENTS.md",
+        "nodes": [
+          "_amazonq_rules_project",
+          "_continue_rules_project",
+          "_github_copilot_instructions"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": ".amazonq/rules/project.md"
+      },
+      {
+        "id": "build_quality_gate_chain",
+        "label": "Build Quality Gate Chain (install, lint, typecheck, build)",
+        "nodes": [
+          "github_copilot_setup_steps_yml_install_dependencies",
+          "github_workflows_ci_yml_ci_workflow",
+          "github_skills_clone_website_skill_md_clone_website_skill"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.75,
+        "source_file": ".github/workflows/ci.yml"
+      },
+      {
+        "id": "github_contribution_templates",
+        "label": "GitHub Contribution Templates",
+        "nodes": [
+          "_github_issue_template_bug_report",
+          "_github_issue_template_feature_request",
+          "_github_pull_request_template",
+          "_github_issue_template_config"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": ".github/ISSUE_TEMPLATE/config.yml"
+      },
+      {
+        "id": "platform_clone_website_commands_from_skill",
+        "label": "Platform Clone-Website Commands Derived from Claude SKILL.md",
+        "nodes": [
+          "_augment_commands_clone_website",
+          "_continue_commands_clone_website",
+          "_cursor_commands_clone_website",
+          "_codex_skills_clone_website_skill"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": ".augment/commands/clone-website.md"
+      }
+    ]
+  },
   "nodes": [
     {
       "label": "Home()",
@@ -12,7 +95,32 @@
       "_origin": "ast",
       "id": "src_app_page_home",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "home()"
+    },
+    {
+      "label": "CalculatorSection()",
+      "file_type": "code",
+      "source_file": "src/components/CalculatorSection.tsx",
+      "source_location": "L27",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_calculatorsection_calculatorsection",
+      "community": 0,
+      "community_name": "UI Page Components",
+      "norm_label": "calculatorsection()"
+    },
+    {
+      "label": "formatRange()",
+      "file_type": "code",
+      "source_file": "src/components/CalculatorSection.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_calculatorsection_formatrange",
+      "community": 0,
+      "community_name": "UI Page Components",
+      "norm_label": "formatrange()"
     },
     {
       "label": "ComparisonSection()",
@@ -23,6 +131,7 @@
       "_origin": "ast",
       "id": "src_components_comparisonsection_comparisonsection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "comparisonsection()"
     },
     {
@@ -34,6 +143,7 @@
       "_origin": "ast",
       "id": "src_components_ctasection_ctasection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "ctasection()"
     },
     {
@@ -45,6 +155,7 @@
       "_origin": "ast",
       "id": "src_components_faqsection_faqitem",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "faqitem()"
     },
     {
@@ -56,6 +167,7 @@
       "_origin": "ast",
       "id": "src_components_faqsection_faqsection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "faqsection()"
     },
     {
@@ -67,6 +179,7 @@
       "_origin": "ast",
       "id": "src_components_footer_footer",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "footer()"
     },
     {
@@ -78,6 +191,7 @@
       "_origin": "ast",
       "id": "src_components_herosection_herosection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "herosection()"
     },
     {
@@ -89,6 +203,7 @@
       "_origin": "ast",
       "id": "src_components_howitworkssection_howitworkssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "howitworkssection()"
     },
     {
@@ -100,6 +215,7 @@
       "_origin": "ast",
       "id": "src_components_navbar_navbar",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "navbar()"
     },
     {
@@ -111,6 +227,7 @@
       "_origin": "ast",
       "id": "src_components_pricingsection_checkicon",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "checkicon()"
     },
     {
@@ -122,6 +239,7 @@
       "_origin": "ast",
       "id": "src_components_pricingsection_pricingsection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "pricingsection()"
     },
     {
@@ -133,6 +251,7 @@
       "_origin": "ast",
       "id": "src_components_problemssection_problemssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "problemssection()"
     },
     {
@@ -144,6 +263,7 @@
       "_origin": "ast",
       "id": "src_components_statssection_statssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "statssection()"
     },
     {
@@ -155,6 +275,7 @@
       "_origin": "ast",
       "id": "src_components_testimonialssection_discordmessage",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "discordmessage()"
     },
     {
@@ -166,6 +287,7 @@
       "_origin": "ast",
       "id": "src_components_testimonialssection_testimonialssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "testimonialssection()"
     },
     {
@@ -177,6 +299,7 @@
       "_origin": "ast",
       "id": "src_components_whatinsidesection_checkicon",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "checkicon()"
     },
     {
@@ -188,6 +311,7 @@
       "_origin": "ast",
       "id": "src_components_whatinsidesection_dashboardmockup",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "dashboardmockup()"
     },
     {
@@ -199,84 +323,8 @@
       "_origin": "ast",
       "id": "src_components_whatinsidesection_whatinsidesection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "whatinsidesection()"
-    },
-    {
-      "label": "Button()",
-      "file_type": "code",
-      "source_file": "src/components/ui/button.tsx",
-      "source_location": "L45",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_ui_button_button",
-      "community": 10,
-      "norm_label": "button()"
-    },
-    {
-      "label": "cn()",
-      "file_type": "code",
-      "source_file": "src/lib/utils.ts",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_utils_cn",
-      "community": 10,
-      "norm_label": "cn()"
-    },
-    {
-      "label": "RootLayout()",
-      "file_type": "code",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_app_layout_rootlayout",
-      "community": 12,
-      "norm_label": "rootlayout()"
-    },
-    {
-      "label": "CalculatorSection()",
-      "file_type": "code",
-      "source_file": "src/components/CalculatorSection.tsx",
-      "source_location": "L27",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_calculatorsection_calculatorsection",
-      "community": 13,
-      "norm_label": "calculatorsection()"
-    },
-    {
-      "label": "formatRange()",
-      "file_type": "code",
-      "source_file": "src/components/CalculatorSection.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_calculatorsection_formatrange",
-      "community": 13,
-      "norm_label": "formatrange()"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "scripts/recon.mjs",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "scripts_recon_main",
-      "community": 14,
-      "norm_label": "main()"
-    },
-    {
-      "label": "walk()",
-      "file_type": "code",
-      "source_file": "scripts/recon.mjs",
-      "source_location": "L114",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "scripts_recon_main_walk",
-      "community": 14,
-      "norm_label": "walk()"
     },
     {
       "label": "noArgs()",
@@ -286,7 +334,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "scripts_sync_skills_noargs",
-      "community": 9,
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
       "norm_label": "noargs()"
     },
     {
@@ -297,8 +346,69 @@
       "_callable": true,
       "_origin": "ast",
       "id": "scripts_sync_skills_write",
-      "community": 9,
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
       "norm_label": "write()"
+    },
+    {
+      "label": "Button()",
+      "file_type": "code",
+      "source_file": "src/components/ui/button.tsx",
+      "source_location": "L45",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_ui_button_button",
+      "community": 12,
+      "community_name": "UI Primitives",
+      "norm_label": "button()"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_utils_cn",
+      "community": 12,
+      "community_name": "UI Primitives",
+      "norm_label": "cn()"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "src/app/layout.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_app_layout_rootlayout",
+      "community": 14,
+      "community_name": "App Layout",
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/recon.mjs",
+      "source_location": "L8",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "scripts_recon_main",
+      "community": 15,
+      "community_name": "Recon Script",
+      "norm_label": "main()"
+    },
+    {
+      "label": "walk()",
+      "file_type": "code",
+      "source_file": "scripts/recon.mjs",
+      "source_location": "L114",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "scripts_recon_main_walk",
+      "community": 15,
+      "community_name": "Recon Script",
+      "norm_label": "walk()"
     },
     {
       "label": "page.tsx",
@@ -308,7 +418,30 @@
       "_origin": "ast",
       "id": "src_app_page",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "page.tsx"
+    },
+    {
+      "label": "CalculatorSection.tsx",
+      "file_type": "code",
+      "source_file": "src/components/CalculatorSection.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_calculatorsection",
+      "community": 0,
+      "community_name": "UI Page Components",
+      "norm_label": "calculatorsection.tsx"
+    },
+    {
+      "label": "incomeStreams",
+      "file_type": "code",
+      "source_file": "src/components/CalculatorSection.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_calculatorsection_incomestreams",
+      "community": 0,
+      "community_name": "UI Page Components",
+      "norm_label": "incomestreams"
     },
     {
       "label": "ComparisonSection.tsx",
@@ -318,6 +451,7 @@
       "_origin": "ast",
       "id": "src_components_comparisonsection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "comparisonsection.tsx"
     },
     {
@@ -328,6 +462,7 @@
       "_origin": "ast",
       "id": "src_components_ctasection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "ctasection.tsx"
     },
     {
@@ -338,6 +473,7 @@
       "_origin": "ast",
       "id": "src_components_faqsection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "faqsection.tsx"
     },
     {
@@ -348,6 +484,7 @@
       "_origin": "ast",
       "id": "src_components_faqsection_faqs",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "faqs"
     },
     {
@@ -358,6 +495,7 @@
       "_origin": "ast",
       "id": "src_components_footer",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "footer.tsx"
     },
     {
@@ -368,6 +506,7 @@
       "_origin": "ast",
       "id": "src_components_footer_footerlinks",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "footerlinks"
     },
     {
@@ -378,6 +517,7 @@
       "_origin": "ast",
       "id": "src_components_herosection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "herosection.tsx"
     },
     {
@@ -388,6 +528,7 @@
       "_origin": "ast",
       "id": "src_components_howitworkssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "howitworkssection.tsx"
     },
     {
@@ -398,6 +539,7 @@
       "_origin": "ast",
       "id": "src_components_howitworkssection_steps",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "steps"
     },
     {
@@ -408,6 +550,7 @@
       "_origin": "ast",
       "id": "src_components_navbar",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "navbar.tsx"
     },
     {
@@ -418,6 +561,7 @@
       "_origin": "ast",
       "id": "src_components_navbar_navlinks",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "navlinks"
     },
     {
@@ -428,6 +572,7 @@
       "_origin": "ast",
       "id": "src_components_pricingsection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "pricingsection.tsx"
     },
     {
@@ -438,6 +583,7 @@
       "_origin": "ast",
       "id": "src_components_pricingsection_features",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "features"
     },
     {
@@ -448,6 +594,7 @@
       "_origin": "ast",
       "id": "src_components_problemssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "problemssection.tsx"
     },
     {
@@ -458,6 +605,7 @@
       "_origin": "ast",
       "id": "src_components_problemssection_problems",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "problems"
     },
     {
@@ -468,6 +616,7 @@
       "_origin": "ast",
       "id": "src_components_statssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "statssection.tsx"
     },
     {
@@ -478,6 +627,7 @@
       "_origin": "ast",
       "id": "src_components_statssection_stats",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "stats"
     },
     {
@@ -488,6 +638,7 @@
       "_origin": "ast",
       "id": "src_components_testimonialssection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "testimonialssection.tsx"
     },
     {
@@ -498,6 +649,7 @@
       "_origin": "ast",
       "id": "src_components_testimonialssection_testimonials",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "testimonials"
     },
     {
@@ -508,6 +660,7 @@
       "_origin": "ast",
       "id": "src_components_whatinsidesection",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "whatinsidesection.tsx"
     },
     {
@@ -518,6 +671,7 @@
       "_origin": "ast",
       "id": "src_components_whatinsidesection_automations",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "automations"
     },
     {
@@ -528,227 +682,140 @@
       "_origin": "ast",
       "id": "src_components_whatinsidesection_tutorials",
       "community": 0,
+      "community_name": "UI Page Components",
       "norm_label": "tutorials"
     },
     {
-      "label": "components.json",
+      "label": "scripts",
       "file_type": "code",
-      "source_file": "components.json",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "package_scripts",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "package_scripts_build",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "build"
+    },
+    {
+      "label": "check",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "package_scripts_check",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "check"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "package_scripts_dev",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "dev"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "package_scripts_lint",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "lint"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "package_scripts_start",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "start"
+    },
+    {
+      "label": "typecheck",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "package_scripts_typecheck",
+      "community": 10,
+      "community_name": "Build Scripts",
+      "norm_label": "typecheck"
+    },
+    {
+      "label": "sync-skills.mjs",
+      "file_type": "code",
+      "source_file": "scripts/sync-skills.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "components",
-      "community": 1,
-      "norm_label": "components.json"
+      "id": "scripts_sync_skills",
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
+      "norm_label": "sync-skills.mjs"
     },
     {
-      "label": "aliases",
+      "label": "geminiBody",
       "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L15",
+      "source_file": "scripts/sync-skills.mjs",
+      "source_location": "L69",
       "_origin": "ast",
-      "id": "components_aliases",
-      "community": 1,
-      "norm_label": "aliases"
+      "id": "scripts_sync_skills_geminibody",
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
+      "norm_label": "geminibody"
     },
     {
-      "label": "components",
+      "label": "match",
       "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L16",
+      "source_file": "scripts/sync-skills.mjs",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "components_aliases_components",
-      "community": 1,
-      "norm_label": "components"
+      "id": "scripts_sync_skills_match",
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
+      "norm_label": "match"
     },
     {
-      "label": "hooks",
+      "label": "ROOT",
       "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "components_aliases_hooks",
-      "community": 1,
-      "norm_label": "hooks"
-    },
-    {
-      "label": "lib",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "components_aliases_lib",
-      "community": 1,
-      "norm_label": "lib"
-    },
-    {
-      "label": "ui",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "components_aliases_ui",
-      "community": 1,
-      "norm_label": "ui"
-    },
-    {
-      "label": "utils",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "components_aliases_utils",
-      "community": 1,
-      "norm_label": "utils"
-    },
-    {
-      "label": "iconLibrary",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "components_iconlibrary",
-      "community": 1,
-      "norm_label": "iconlibrary"
-    },
-    {
-      "label": "menuAccent",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "components_menuaccent",
-      "community": 1,
-      "norm_label": "menuaccent"
-    },
-    {
-      "label": "menuColor",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "components_menucolor",
-      "community": 1,
-      "norm_label": "menucolor"
-    },
-    {
-      "label": "registries",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "components_registries",
-      "community": 1,
-      "norm_label": "registries"
-    },
-    {
-      "label": "rsc",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "components_rsc",
-      "community": 1,
-      "norm_label": "rsc"
-    },
-    {
-      "label": "rtl",
-      "file_type": "code",
-      "source_file": "components.json",
+      "source_file": "scripts/sync-skills.mjs",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "components_rtl",
-      "community": 1,
-      "norm_label": "rtl"
+      "id": "scripts_sync_skills_root",
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
+      "norm_label": "root"
     },
     {
-      "label": "$schema",
+      "label": "SOURCE",
       "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L2",
+      "source_file": "scripts/sync-skills.mjs",
+      "source_location": "L15",
       "_origin": "ast",
-      "id": "components_schema",
-      "community": 1,
-      "norm_label": "$schema"
-    },
-    {
-      "label": "style",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "components_style",
-      "community": 1,
-      "norm_label": "style"
-    },
-    {
-      "label": "tailwind",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "components_tailwind",
-      "community": 1,
-      "norm_label": "tailwind"
-    },
-    {
-      "label": "baseColor",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "components_tailwind_basecolor",
-      "community": 1,
-      "norm_label": "basecolor"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "components_tailwind_config",
-      "community": 1,
-      "norm_label": "config"
-    },
-    {
-      "label": "css",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "components_tailwind_css",
-      "community": 1,
-      "norm_label": "css"
-    },
-    {
-      "label": "cssVariables",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "components_tailwind_cssvariables",
-      "community": 1,
-      "norm_label": "cssvariables"
-    },
-    {
-      "label": "prefix",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "components_tailwind_prefix",
-      "community": 1,
-      "norm_label": "prefix"
-    },
-    {
-      "label": "tsx",
-      "file_type": "code",
-      "source_file": "components.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "components_tsx",
-      "community": 1,
-      "norm_label": "tsx"
+      "id": "scripts_sync_skills_source",
+      "community": 11,
+      "community_name": "Skill Sync Pipeline",
+      "norm_label": "source"
     },
     {
       "label": "button.tsx",
@@ -757,7 +824,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_ui_button",
-      "community": 10,
+      "community": 12,
+      "community_name": "UI Primitives",
       "norm_label": "button.tsx"
     },
     {
@@ -767,7 +835,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_ui_button_buttonvariants",
-      "community": 10,
+      "community": 12,
+      "community_name": "UI Primitives",
       "norm_label": "buttonvariants"
     },
     {
@@ -777,7 +846,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_utils",
-      "community": 10,
+      "community": 12,
+      "community_name": "UI Primitives",
       "norm_label": "utils.ts"
     },
     {
@@ -791,7 +861,8 @@
       },
       "_origin": "ast",
       "id": "scripts_sync_agent_rules",
-      "community": 11,
+      "community": 13,
+      "community_name": "Agent Rule Sync",
       "norm_label": "sync-agent-rules.sh"
     },
     {
@@ -805,7 +876,8 @@
       },
       "_origin": "ast",
       "id": "scripts_sync_agent_rules_resolve_imports",
-      "community": 11,
+      "community": 13,
+      "community_name": "Agent Rule Sync",
       "norm_label": "resolve_imports()"
     },
     {
@@ -819,7 +891,8 @@
       },
       "_origin": "ast",
       "id": "scripts_sync_agent_rules_sh__entry",
-      "community": 11,
+      "community": 13,
+      "community_name": "Agent Rule Sync",
       "norm_label": "sync-agent-rules.sh script"
     },
     {
@@ -833,7 +906,8 @@
       },
       "_origin": "ast",
       "id": "scripts_sync_agent_rules_write_file",
-      "community": 11,
+      "community": 13,
+      "community_name": "Agent Rule Sync",
       "norm_label": "write_file()"
     },
     {
@@ -843,7 +917,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_layout",
-      "community": 12,
+      "community": 14,
+      "community_name": "App Layout",
       "norm_label": "layout.tsx"
     },
     {
@@ -853,7 +928,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_app_layout_inter",
-      "community": 12,
+      "community": 14,
+      "community_name": "App Layout",
       "norm_label": "inter"
     },
     {
@@ -863,28 +939,9 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_app_layout_metadata",
-      "community": 12,
+      "community": 14,
+      "community_name": "App Layout",
       "norm_label": "metadata"
-    },
-    {
-      "label": "CalculatorSection.tsx",
-      "file_type": "code",
-      "source_file": "src/components/CalculatorSection.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_calculatorsection",
-      "community": 13,
-      "norm_label": "calculatorsection.tsx"
-    },
-    {
-      "label": "incomeStreams",
-      "file_type": "code",
-      "source_file": "src/components/CalculatorSection.tsx",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "src_components_calculatorsection_incomestreams",
-      "community": 13,
-      "norm_label": "incomestreams"
     },
     {
       "label": "recon.mjs",
@@ -893,7 +950,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scripts_recon",
-      "community": 14,
+      "community": 15,
+      "community_name": "Recon Script",
       "norm_label": "recon.mjs"
     },
     {
@@ -903,7 +961,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "eslint_config",
-      "community": 15,
+      "community": 17,
+      "community_name": "ESLint Config",
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -913,7 +972,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "eslint_config_eslintconfig",
-      "community": 15,
+      "community": 17,
+      "community_name": "ESLint Config",
       "norm_label": "eslintconfig"
     },
     {
@@ -923,7 +983,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "next_config",
-      "community": 16,
+      "community": 19,
+      "community_name": "Next.js Config",
       "norm_label": "next.config.ts"
     },
     {
@@ -933,598 +994,9 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "next_config_nextconfig",
-      "community": 16,
+      "community": 19,
+      "community_name": "Next.js Config",
       "norm_label": "nextconfig"
-    },
-    {
-      "label": "postcss.config.mjs",
-      "file_type": "code",
-      "source_file": "postcss.config.mjs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "postcss_config",
-      "community": 17,
-      "norm_label": "postcss.config.mjs"
-    },
-    {
-      "label": "config",
-      "file_type": "code",
-      "source_file": "postcss.config.mjs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "postcss_config_config",
-      "community": 17,
-      "norm_label": "config"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "package_dependencies",
-      "community": 2,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "@base-ui/react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "package_dependencies_base_ui_react",
-      "community": 2,
-      "norm_label": "@base-ui/react"
-    },
-    {
-      "label": "class-variance-authority",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "package_dependencies_class_variance_authority",
-      "community": 2,
-      "norm_label": "class-variance-authority"
-    },
-    {
-      "label": "clsx",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "package_dependencies_clsx",
-      "community": 2,
-      "norm_label": "clsx"
-    },
-    {
-      "label": "lucide-react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "package_dependencies_lucide_react",
-      "community": 2,
-      "norm_label": "lucide-react"
-    },
-    {
-      "label": "next",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L42",
-      "_origin": "ast",
-      "id": "package_dependencies_next",
-      "community": 2,
-      "norm_label": "next"
-    },
-    {
-      "label": "react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "package_dependencies_react",
-      "community": 2,
-      "norm_label": "react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "package_dependencies_react_dom",
-      "community": 2,
-      "norm_label": "react-dom"
-    },
-    {
-      "label": "shadcn",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "package_dependencies_shadcn",
-      "community": 2,
-      "norm_label": "shadcn"
-    },
-    {
-      "label": "tailwind-merge",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "package_dependencies_tailwind_merge",
-      "community": 2,
-      "norm_label": "tailwind-merge"
-    },
-    {
-      "label": "tw-animate-css",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "package_dependencies_tw_animate_css",
-      "community": 2,
-      "norm_label": "tw-animate-css"
-    },
-    {
-      "label": "@base-ui/react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "base_ui_react",
-      "community": 2,
-      "norm_label": "@base-ui/react"
-    },
-    {
-      "label": "class-variance-authority",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "class_variance_authority",
-      "community": 2,
-      "norm_label": "class-variance-authority"
-    },
-    {
-      "label": "clsx",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "clsx",
-      "community": 2,
-      "norm_label": "clsx"
-    },
-    {
-      "label": "lucide-react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "lucide_react",
-      "community": 2,
-      "norm_label": "lucide-react"
-    },
-    {
-      "label": "next",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L42",
-      "_origin": "ast",
-      "id": "next",
-      "community": 2,
-      "norm_label": "next"
-    },
-    {
-      "label": "react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "react",
-      "community": 2,
-      "norm_label": "react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "react_dom",
-      "community": 2,
-      "norm_label": "react-dom"
-    },
-    {
-      "label": "shadcn",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "shadcn",
-      "community": 2,
-      "norm_label": "shadcn"
-    },
-    {
-      "label": "tailwind-merge",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "tailwind_merge",
-      "community": 2,
-      "norm_label": "tailwind-merge"
-    },
-    {
-      "label": "tw-animate-css",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "tw_animate_css",
-      "community": 2,
-      "norm_label": "tw-animate-css"
-    },
-    {
-      "label": "compilerOptions",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions",
-      "community": 3,
-      "norm_label": "compileroptions"
-    },
-    {
-      "label": "allowJs",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_allowjs",
-      "community": 3,
-      "norm_label": "allowjs"
-    },
-    {
-      "label": "esModuleInterop",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_esmoduleinterop",
-      "community": 3,
-      "norm_label": "esmoduleinterop"
-    },
-    {
-      "label": "incremental",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_incremental",
-      "community": 3,
-      "norm_label": "incremental"
-    },
-    {
-      "label": "isolatedModules",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_isolatedmodules",
-      "community": 3,
-      "norm_label": "isolatedmodules"
-    },
-    {
-      "label": "jsx",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_jsx",
-      "community": 3,
-      "norm_label": "jsx"
-    },
-    {
-      "label": "lib",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_lib",
-      "community": 3,
-      "norm_label": "lib"
-    },
-    {
-      "label": "module",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_module",
-      "community": 3,
-      "norm_label": "module"
-    },
-    {
-      "label": "moduleResolution",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_moduleresolution",
-      "community": 3,
-      "norm_label": "moduleresolution"
-    },
-    {
-      "label": "noEmit",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_noemit",
-      "community": 3,
-      "norm_label": "noemit"
-    },
-    {
-      "label": "paths",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_paths",
-      "community": 3,
-      "norm_label": "paths"
-    },
-    {
-      "label": "plugins",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_plugins",
-      "community": 3,
-      "norm_label": "plugins"
-    },
-    {
-      "label": "resolveJsonModule",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_resolvejsonmodule",
-      "community": 3,
-      "norm_label": "resolvejsonmodule"
-    },
-    {
-      "label": "skipLibCheck",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_skiplibcheck",
-      "community": 3,
-      "norm_label": "skiplibcheck"
-    },
-    {
-      "label": "strict",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_strict",
-      "community": 3,
-      "norm_label": "strict"
-    },
-    {
-      "label": "target",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_target",
-      "community": 3,
-      "norm_label": "target"
-    },
-    {
-      "label": "dom",
-      "file_type": "concept",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "ref_dom",
-      "community": 3,
-      "norm_label": "dom"
-    },
-    {
-      "label": "dom.iterable",
-      "file_type": "concept",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "ref_dom_iterable",
-      "community": 3,
-      "norm_label": "dom.iterable"
-    },
-    {
-      "label": "esnext",
-      "file_type": "concept",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "ref_esnext",
-      "community": 3,
-      "norm_label": "esnext"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "package_devdependencies",
-      "community": 4,
-      "norm_label": "devdependencies"
-    },
-    {
-      "label": "eslint",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L54",
-      "_origin": "ast",
-      "id": "package_devdependencies_eslint",
-      "community": 4,
-      "norm_label": "eslint"
-    },
-    {
-      "label": "eslint-config-next",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "package_devdependencies_eslint_config_next",
-      "community": 4,
-      "norm_label": "eslint-config-next"
-    },
-    {
-      "label": "playwright",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "package_devdependencies_playwright",
-      "community": 4,
-      "norm_label": "playwright"
-    },
-    {
-      "label": "@tailwindcss/postcss",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "package_devdependencies_tailwindcss_postcss",
-      "community": 4,
-      "norm_label": "@tailwindcss/postcss"
-    },
-    {
-      "label": "@types/node",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_node",
-      "community": 4,
-      "norm_label": "@types/node"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_react",
-      "community": 4,
-      "norm_label": "@types/react"
-    },
-    {
-      "label": "@types/react-dom",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_react_dom",
-      "community": 4,
-      "norm_label": "@types/react-dom"
-    },
-    {
-      "label": "typescript",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L58",
-      "_origin": "ast",
-      "id": "package_devdependencies_typescript",
-      "community": 4,
-      "norm_label": "typescript"
-    },
-    {
-      "label": "eslint",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L54",
-      "_origin": "ast",
-      "id": "eslint",
-      "community": 4,
-      "norm_label": "eslint"
-    },
-    {
-      "label": "eslint-config-next",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "eslint_config_next",
-      "community": 4,
-      "norm_label": "eslint-config-next"
-    },
-    {
-      "label": "playwright",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "playwright",
-      "community": 4,
-      "norm_label": "playwright"
-    },
-    {
-      "label": "@tailwindcss/postcss",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "tailwindcss_postcss",
-      "community": 4,
-      "norm_label": "@tailwindcss/postcss"
-    },
-    {
-      "label": "@types/node",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "types_node",
-      "community": 4,
-      "norm_label": "@types/node"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "types_react",
-      "community": 4,
-      "norm_label": "@types/react"
-    },
-    {
-      "label": "@types/react-dom",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "types_react_dom",
-      "community": 4,
-      "norm_label": "@types/react-dom"
-    },
-    {
-      "label": "typescript",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L58",
-      "_origin": "ast",
-      "id": "typescript",
-      "community": 4,
-      "norm_label": "typescript"
     },
     {
       "label": "package.json",
@@ -1533,7 +1005,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "package",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "package.json"
     },
     {
@@ -1543,7 +1016,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "package_author",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "author"
     },
     {
@@ -1553,7 +1027,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_bugs",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "bugs"
     },
     {
@@ -1563,7 +1038,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "package_bugs_url",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "url"
     },
     {
@@ -1573,7 +1049,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "package_description",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "description"
     },
     {
@@ -1583,7 +1060,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_engines",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "engines"
     },
     {
@@ -1593,7 +1071,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_engines_node",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "node"
     },
     {
@@ -1603,8 +1082,20 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_homepage",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "homepage"
+    },
+    {
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "package_keywords",
+      "community": 2,
+      "community_name": "Package Metadata",
+      "norm_label": "keywords"
     },
     {
       "label": "license",
@@ -1613,7 +1104,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "package_license",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "license"
     },
     {
@@ -1623,7 +1115,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "package_name",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "name"
     },
     {
@@ -1633,7 +1126,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "package_private",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "private"
     },
     {
@@ -1643,7 +1137,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "package_repository",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "repository"
     },
     {
@@ -1653,7 +1148,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "package_repository_type",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "type"
     },
     {
@@ -1663,7 +1159,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "package_repository_url",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "url"
     },
     {
@@ -1673,28 +1170,9 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "package_version",
-      "community": 5,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "version"
-    },
-    {
-      "label": "tailwindcss",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L57",
-      "_origin": "ast",
-      "id": "package_devdependencies_tailwindcss",
-      "community": 6,
-      "norm_label": "tailwindcss"
-    },
-    {
-      "label": "keywords",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "package_keywords",
-      "community": 6,
-      "norm_label": "keywords"
     },
     {
       "label": "ai",
@@ -1703,7 +1181,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_ai",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "ai"
     },
     {
@@ -1713,7 +1192,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_claude_code",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "claude-code"
     },
     {
@@ -1723,7 +1203,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_nextjs",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "nextjs"
     },
     {
@@ -1733,7 +1214,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_reverse_engineering",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "reverse-engineering"
     },
     {
@@ -1743,8 +1225,20 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_shadcn_ui",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "shadcn-ui"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "ref_tailwindcss",
+      "community": 2,
+      "community_name": "Package Metadata",
+      "norm_label": "tailwindcss"
     },
     {
       "label": "template",
@@ -1753,7 +1247,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_template",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "template"
     },
     {
@@ -1763,8 +1258,647 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "ref_website_clone",
-      "community": 6,
+      "community": 2,
+      "community_name": "Package Metadata",
       "norm_label": "website-clone"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "postcss_config",
+      "community": 20,
+      "community_name": "PostCSS Config",
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "postcss.config.mjs",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "postcss_config_config",
+      "community": 20,
+      "community_name": "PostCSS Config",
+      "norm_label": "config"
+    },
+    {
+      "label": "components.json",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "components.json"
+    },
+    {
+      "label": "aliases",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "components_aliases",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "aliases"
+    },
+    {
+      "label": "components",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "components_aliases_components",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "components"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "components_aliases_hooks",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "hooks"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "components_aliases_lib",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "lib"
+    },
+    {
+      "label": "ui",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "components_aliases_ui",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "ui"
+    },
+    {
+      "label": "utils",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "components_aliases_utils",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "utils"
+    },
+    {
+      "label": "iconLibrary",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "components_iconlibrary",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "iconlibrary"
+    },
+    {
+      "label": "menuAccent",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "components_menuaccent",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "menuaccent"
+    },
+    {
+      "label": "menuColor",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "components_menucolor",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "menucolor"
+    },
+    {
+      "label": "registries",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "components_registries",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "registries"
+    },
+    {
+      "label": "rsc",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "components_rsc",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "rsc"
+    },
+    {
+      "label": "rtl",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "components_rtl",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "rtl"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "components_schema",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "$schema"
+    },
+    {
+      "label": "style",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "components_style",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "style"
+    },
+    {
+      "label": "tailwind",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "components_tailwind",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "tailwind"
+    },
+    {
+      "label": "baseColor",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "components_tailwind_basecolor",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "basecolor"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "components_tailwind_config",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "config"
+    },
+    {
+      "label": "css",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "components_tailwind_css",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "css"
+    },
+    {
+      "label": "cssVariables",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "components_tailwind_cssvariables",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "cssvariables"
+    },
+    {
+      "label": "prefix",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "components_tailwind_prefix",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "prefix"
+    },
+    {
+      "label": "tsx",
+      "file_type": "code",
+      "source_file": "components.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "components_tsx",
+      "community": 3,
+      "community_name": "shadcn/ui Configuration",
+      "norm_label": "tsx"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "package_dependencies",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@base-ui/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "package_dependencies_base_ui_react",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "@base-ui/react"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "package_dependencies_class_variance_authority",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "class-variance-authority"
+    },
+    {
+      "label": "clsx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "package_dependencies_clsx",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "clsx"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "package_dependencies_lucide_react",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "package_dependencies_next",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "next"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "package_dependencies_react",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "package_dependencies_react_dom",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "shadcn",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "package_dependencies_shadcn",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "shadcn"
+    },
+    {
+      "label": "tailwind-merge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "package_dependencies_tailwind_merge",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "tailwind-merge"
+    },
+    {
+      "label": "tw-animate-css",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "package_dependencies_tw_animate_css",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "tw-animate-css"
+    },
+    {
+      "label": "@base-ui/react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "base_ui_react",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "@base-ui/react"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "class_variance_authority",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "class-variance-authority"
+    },
+    {
+      "label": "clsx",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "clsx",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "clsx"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "lucide_react",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "lucide-react"
+    },
+    {
+      "label": "next",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "next",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "next"
+    },
+    {
+      "label": "react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "react",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "react_dom",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "shadcn",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "shadcn",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "shadcn"
+    },
+    {
+      "label": "tailwind-merge",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "tailwind_merge",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "tailwind-merge"
+    },
+    {
+      "label": "tw-animate-css",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "tw_animate_css",
+      "community": 4,
+      "community_name": "Frontend Dependencies",
+      "norm_label": "tw-animate-css"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "package_devdependencies",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "package_devdependencies_eslint",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-config-next",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "package_devdependencies_eslint_config_next",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "eslint-config-next"
+    },
+    {
+      "label": "playwright",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "package_devdependencies_playwright",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "playwright"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss_postcss",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "package_devdependencies_types_node",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "package_devdependencies_types_react",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "package_devdependencies_types_react_dom",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "package_devdependencies_typescript",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "typescript"
+    },
+    {
+      "label": "eslint",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "eslint",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-config-next",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "eslint_config_next",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "eslint-config-next"
+    },
+    {
+      "label": "playwright",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "playwright",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "playwright"
     },
     {
       "label": "tailwindcss",
@@ -1773,8 +1907,273 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "tailwindcss",
-      "community": 6,
+      "community": 5,
+      "community_name": "Dev Tooling",
       "norm_label": "tailwindcss"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "tailwindcss_postcss",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "types_node",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "types_react",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "types_react_dom",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "typescript",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "typescript",
+      "community": 5,
+      "community_name": "Dev Tooling",
+      "norm_label": "typescript"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_allowjs",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "allowjs"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_esmoduleinterop",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_incremental",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "incremental"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_isolatedmodules",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_jsx",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "jsx"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_lib",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "lib"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_module",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "module"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_moduleresolution",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_noemit",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "noemit"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_paths",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "paths"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_plugins",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "plugins"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_resolvejsonmodule",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_skiplibcheck",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_strict",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "strict"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "tsconfig_compileroptions_target",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "target"
+    },
+    {
+      "label": "dom",
+      "file_type": "concept",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "ref_dom",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "dom"
+    },
+    {
+      "label": "dom.iterable",
+      "file_type": "concept",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "ref_dom_iterable",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "dom.iterable"
+    },
+    {
+      "label": "esnext",
+      "file_type": "concept",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "ref_esnext",
+      "community": 6,
+      "community_name": "TypeScript Config",
+      "norm_label": "esnext"
     },
     {
       "label": "tsconfig.json",
@@ -1783,7 +2182,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tsconfig",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "tsconfig.json"
     },
     {
@@ -1793,7 +2193,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tsconfig_exclude",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "exclude"
     },
     {
@@ -1803,7 +2204,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tsconfig_include",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "include"
     },
     {
@@ -1813,7 +2215,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "ref_mts",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "**/*.mts"
     },
     {
@@ -1823,7 +2226,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "ref_next_dev_types_ts",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": ".next/dev/types/**/*.ts"
     },
     {
@@ -1833,7 +2237,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "ref_next_env_d_ts",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "next-env.d.ts"
     },
     {
@@ -1843,7 +2248,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "ref_next_types_ts",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": ".next/types/**/*.ts"
     },
     {
@@ -1853,7 +2259,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "ref_node_modules",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "node_modules"
     },
     {
@@ -1863,7 +2270,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "ref_ts",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "**/*.ts"
     },
     {
@@ -1873,128 +2281,723 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "ref_tsx",
-      "community": 7,
+      "community": 8,
+      "community_name": "Next.js Type References",
       "norm_label": "**/*.tsx"
     },
     {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "package_scripts",
-      "community": 8,
-      "norm_label": "scripts"
+      "label": "Multi-Platform AI Agent Support",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_multi_platform_ai_agent_support",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "multi-platform ai agent support"
     },
     {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "package_scripts_build",
-      "community": 8,
-      "norm_label": "build"
+      "label": "Multi-URL Parallel Clone Support",
+      "file_type": "concept",
+      "source_file": "CHANGELOG.md",
+      "source_location": "[0.3.0]",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "changelog_md_multi_url_support",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "multi-url parallel clone support"
     },
     {
-      "label": "check",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "package_scripts_check",
-      "community": 8,
-      "norm_label": "check"
+      "label": "Component Inventory Documentation",
+      "file_type": "concept",
+      "source_file": "docs/research/INSPECTION_GUIDE.md",
+      "source_location": "Phase 2: Component Inventory",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_research_inspection_guide_md_component_inventory",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "component inventory documentation"
     },
     {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "package_scripts_dev",
-      "community": 8,
-      "norm_label": "dev"
+      "label": "Design Token Extraction (colors, typography, spacing, shadows)",
+      "file_type": "concept",
+      "source_file": "docs/research/INSPECTION_GUIDE.md",
+      "source_location": "Phase 1: Visual Audit",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_research_inspection_guide_md_design_token_extraction",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "design token extraction (colors, typography, spacing, shadows)"
     },
     {
-      "label": "lint",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "package_scripts_lint",
-      "community": 8,
-      "norm_label": "lint"
+      "label": "Mandatory Interaction Sweep (scroll, click, hover, responsive)",
+      "file_type": "concept",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Phase 1: Mandatory Interaction Sweep",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_mandatory_interaction_sweep",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "mandatory interaction sweep (scroll, click, hover, responsive)"
     },
     {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "package_scripts_start",
-      "community": 8,
-      "norm_label": "start"
+      "label": "Visual QA Diff Phase (side-by-side comparison)",
+      "file_type": "concept",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Phase 5: Visual QA Diff",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_visual_qa_diff",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "visual qa diff phase (side-by-side comparison)"
     },
     {
-      "label": "typecheck",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "package_scripts_typecheck",
-      "community": 8,
-      "norm_label": "typecheck"
+      "label": "Agent Instructions (AGENTS.md)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_agent_instructions",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "agent instructions (agents.md)"
     },
     {
-      "label": "sync-skills.mjs",
+      "label": "Project Changelog",
+      "file_type": "document",
+      "source_file": "CHANGELOG.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "changelog_md_project_changelog",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "project changelog"
+    },
+    {
+      "label": "Claude Code Configuration (CLAUDE.md)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_claude_config",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "claude code configuration (claude.md)"
+    },
+    {
+      "label": "Website Inspection Guide",
+      "file_type": "document",
+      "source_file": "docs/research/INSPECTION_GUIDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_research_inspection_guide_md_inspection_guide",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "website inspection guide"
+    },
+    {
+      "label": "Gemini CLI Configuration (GEMINI.md)",
+      "file_type": "document",
+      "source_file": "GEMINI.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gemini_md_gemini_config",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "gemini cli configuration (gemini.md)"
+    },
+    {
+      "label": "Clone Website Skill (GitHub Copilot)",
+      "file_type": "document",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_clone_website_skill",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "clone website skill (github copilot)"
+    },
+    {
+      "label": "Clone Website Command (OpenCode)",
+      "file_type": "document",
+      "source_file": ".opencode/commands/clone-website.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "opencode_commands_clone_website_md_clone_website_command",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "clone website command (opencode)"
+    },
+    {
+      "label": "Project README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_md_project_readme",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "project readme"
+    },
+    {
+      "label": "Clone Website Workflow (Windsurf)",
+      "file_type": "document",
+      "source_file": ".windsurf/workflows/clone-website.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "windsurf_workflows_clone_website_md_clone_website_workflow",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "clone website workflow (windsurf)"
+    },
+    {
+      "label": "Original vs Clone Side-by-Side Comparison",
+      "file_type": "image",
+      "source_file": "docs/design-references/comparison.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_design_references_comparison_png_visual_qa_comparison",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "original vs clone side-by-side comparison"
+    },
+    {
+      "label": "Pixel-Perfect Cloning Design Principle",
+      "file_type": "rationale",
+      "source_file": "AGENTS.md",
+      "source_location": "Design Principles",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_pixel_perfect_cloning",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "pixel-perfect cloning design principle"
+    },
+    {
+      "label": "Worktree Isolation Pattern for Parallel Builder Agents",
+      "file_type": "rationale",
+      "source_file": "AGENTS.md",
+      "source_location": "MOST IMPORTANT NOTES",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_worktree_parallel_build_pattern",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "worktree isolation pattern for parallel builder agents"
+    },
+    {
+      "label": "Browser MCP Requirement for Extraction",
+      "file_type": "rationale",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Pre-Flight \u00a71",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_browser_mcp_requirement",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "browser mcp requirement for extraction"
+    },
+    {
+      "label": "Complexity Budget Rule (150-line builder prompt limit)",
+      "file_type": "rationale",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a72",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_complexity_budget_rule",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "complexity budget rule (150-line builder prompt limit)"
+    },
+    {
+      "label": "Foreman Pattern (Extract-Spec-Dispatch in Parallel)",
+      "file_type": "rationale",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "line 14",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_foreman_pattern",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "foreman pattern (extract-spec-dispatch in parallel)"
+    },
+    {
+      "label": "Foundation First Principle (sequential CSS/fonts/types before parallel build)",
+      "file_type": "rationale",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a74",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_foundation_first_principle",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "foundation first principle (sequential css/fonts/types before parallel build)"
+    },
+    {
+      "label": "Identify Interaction Model Before Building (scroll vs click vs hover)",
+      "file_type": "rationale",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a76",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_interaction_model_identification",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "identify interaction model before building (scroll vs click vs hover)"
+    },
+    {
+      "label": "Spec File as Source of Truth (Principle 8)",
+      "file_type": "rationale",
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a78",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_skills_clone_website_skill_md_spec_file_source_of_truth",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "spec file as source of truth (principle 8)"
+    },
+    {
+      "label": "Ethical Use Constraints (anti-phishing, no impersonation)",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": "Not Intended For",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_md_ethical_use_constraints",
+      "community": 1,
+      "community_name": "Agent Instructions & Docs",
+      "norm_label": "ethical use constraints (anti-phishing, no impersonation)"
+    },
+    {
+      "label": "Bug Report Issue Template",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_issue_template_bug_report",
+      "community": 16,
+      "community_name": "Issue Templates",
+      "norm_label": "bug report issue template"
+    },
+    {
+      "label": "Feature Request Issue Template",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_issue_template_feature_request",
+      "community": 16,
+      "community_name": "Issue Templates",
+      "norm_label": "feature request issue template"
+    },
+    {
+      "label": "GitHub Copilot Setup Steps",
+      "file_type": "document",
+      "source_file": ".github/copilot-setup-steps.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_copilot_setup_steps_yml_install_dependencies",
+      "community": 18,
+      "community_name": "CI & GitHub Actions",
+      "norm_label": "github copilot setup steps"
+    },
+    {
+      "label": "CI Workflow (GitHub Actions)",
+      "file_type": "document",
+      "source_file": ".github/workflows/ci.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_workflows_ci_yml_ci_workflow",
+      "community": 18,
+      "community_name": "CI & GitHub Actions",
+      "norm_label": "ci workflow (github actions)"
+    },
+    {
+      "label": "GitHub Funding Configuration",
+      "file_type": "document",
+      "source_file": ".github/FUNDING.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_funding",
+      "community": 21,
+      "community_name": "GitHub Funding",
+      "norm_label": "github funding configuration"
+    },
+    {
+      "label": "Issue Template Config",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_issue_template_config",
+      "community": 22,
+      "community_name": "Issue Template Config",
+      "norm_label": "issue template config"
+    },
+    {
+      "label": "Pull Request Template",
+      "file_type": "document",
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_pull_request_template",
+      "community": 23,
+      "community_name": "PR Template",
+      "norm_label": "pull request template"
+    },
+    {
+      "label": "Docker Compose Dev Service",
+      "file_type": "document",
+      "source_file": "docker-compose.yml",
+      "source_location": "services.dev",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_yml_dev_service",
+      "community": 24,
+      "community_name": "Docker Dev",
+      "norm_label": "docker compose dev service"
+    },
+    {
+      "label": "Docker Compose Production Service",
+      "file_type": "document",
+      "source_file": "docker-compose.yml",
+      "source_location": "services.app",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_yml_production_service",
+      "community": 25,
+      "community_name": "Docker Production",
+      "norm_label": "docker compose production service"
+    },
+    {
+      "label": "sync-skills.mjs \u2014 Platform Skill Regeneration Script",
       "file_type": "code",
-      "source_file": "scripts/sync-skills.mjs",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "scripts_sync_skills",
+      "source_file": ".augment/commands/clone-website.md",
+      "source_location": "Referenced as regeneration command in AUTO-GENERATED header",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "scripts_sync_skills_mjs",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "sync-skills.mjs \u2014 platform skill regeneration script"
+    },
+    {
+      "label": "Clone Website 5-Phase Workflow",
+      "file_type": "concept",
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Phases 1-5: Reconnaissance, Foundation Build, Component Spec and Dispatch, Page Assembly, Visual QA Diff",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "clone_website_workflow",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "clone website 5-phase workflow"
+    },
+    {
+      "label": "Augment Clone Website Command",
+      "file_type": "document",
+      "source_file": ".augment/commands/clone-website.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_augment_commands_clone_website",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "augment clone website command"
+    },
+    {
+      "label": "Claude Clone Website Skill (Canonical Source)",
+      "file_type": "document",
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_claude_skills_clone_website_skill",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "claude clone website skill (canonical source)"
+    },
+    {
+      "label": "Codex Clone Website Skill",
+      "file_type": "document",
+      "source_file": ".codex/skills/clone-website/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_codex_skills_clone_website_skill",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "codex clone website skill"
+    },
+    {
+      "label": "Continue Clone Website Command",
+      "file_type": "document",
+      "source_file": ".continue/commands/clone-website.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_continue_commands_clone_website",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "continue clone website command"
+    },
+    {
+      "label": "Cursor Clone Website Command",
+      "file_type": "document",
+      "source_file": ".cursor/commands/clone-website.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_cursor_commands_clone_website",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "cursor clone website command"
+    },
+    {
+      "label": "Mandatory Component Spec File Pattern",
+      "file_type": "rationale",
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Principle 8: Spec Files Are the Source of Truth; Phase 3 Step 2: Write the Component Spec File",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "component_spec_pattern",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "mandatory component spec file pattern"
+    },
+    {
+      "label": "Foreman-Builder Parallel Agent Dispatch Pattern",
+      "file_type": "rationale",
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Intro: foreman walking the job site; Phase 3 Step 3: Dispatch Builders in worktrees",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "foreman_builder_parallel_pattern",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "foreman-builder parallel agent dispatch pattern"
+    },
+    {
+      "label": "Pixel-Perfect Cloning Principle",
+      "file_type": "rationale",
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Scope Defaults: Fidelity level \u2014 pixel-perfect; Design Principles section",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pixel_perfect_cloning_principle",
+      "community": 7,
+      "community_name": "Cross-Platform AI Skills",
+      "norm_label": "pixel-perfect cloning principle"
+    },
+    {
+      "label": "sync-agent-rules.sh \u2014 Platform Rules Regeneration Script",
+      "file_type": "code",
+      "source_file": ".amazonq/rules/project.md",
+      "source_location": "Referenced as regeneration command in AUTO-GENERATED header",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "scripts_sync_agent_rules_sh",
       "community": 9,
-      "norm_label": "sync-skills.mjs"
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "sync-agent-rules.sh \u2014 platform rules regeneration script"
     },
     {
-      "label": "geminiBody",
-      "file_type": "code",
-      "source_file": "scripts/sync-skills.mjs",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "scripts_sync_skills_geminibody",
+      "label": "Aider Configuration",
+      "file_type": "document",
+      "source_file": ".aider.conf.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_aider_conf",
       "community": 9,
-      "norm_label": "geminibody"
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "aider configuration"
     },
     {
-      "label": "match",
-      "file_type": "code",
-      "source_file": "scripts/sync-skills.mjs",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "scripts_sync_skills_match",
+      "label": "Amazon Q Project Rules",
+      "file_type": "document",
+      "source_file": ".amazonq/rules/project.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_amazonq_rules_project",
       "community": 9,
-      "norm_label": "match"
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "amazon q project rules"
     },
     {
-      "label": "ROOT",
-      "file_type": "code",
-      "source_file": "scripts/sync-skills.mjs",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "scripts_sync_skills_root",
+      "label": "Continue Project Rules",
+      "file_type": "document",
+      "source_file": ".continue/rules/project.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_continue_rules_project",
       "community": 9,
-      "norm_label": "root"
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "continue project rules"
     },
     {
-      "label": "SOURCE",
-      "file_type": "code",
-      "source_file": "scripts/sync-skills.mjs",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "scripts_sync_skills_source",
+      "label": "GitHub Copilot Instructions",
+      "file_type": "document",
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "_github_copilot_instructions",
       "community": 9,
-      "norm_label": "source"
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "github copilot instructions"
+    },
+    {
+      "label": "AGENTS.md \u2014 Canonical Project Rules Source",
+      "file_type": "document",
+      "source_file": ".amazonq/rules/project.md",
+      "source_location": "Referenced as source in AUTO-GENERATED header across all platform rule files",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md",
+      "community": 9,
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "agents.md \u2014 canonical project rules source"
+    },
+    {
+      "label": "Website Inspection Guide",
+      "file_type": "document",
+      "source_file": ".aider.conf.yml",
+      "source_location": "docs/research/INSPECTION_GUIDE.md referenced in aider read list",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_research_inspection_guide",
+      "community": 9,
+      "community_name": "IDE & AI Tool Config",
+      "norm_label": "website inspection guide"
     }
   ],
   "links": [
@@ -2127,6 +3130,18 @@
       "context": "import",
       "_origin": "ast",
       "source": "package_keywords",
+      "target": "ref_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
+      "source": "package_keywords",
       "target": "ref_template",
       "confidence_score": 1.0
     },
@@ -2140,18 +3155,6 @@
       "_origin": "ast",
       "source": "package_keywords",
       "target": "ref_website_clone",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "extends",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "context": "import",
-      "_origin": "ast",
-      "source": "package_keywords",
-      "target": "tailwindcss",
       "confidence_score": 1.0
     },
     {
@@ -4289,8 +5292,619 @@
       "source": "scripts_sync_agent_rules",
       "target": "scripts_sync_agent_rules_write_file",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Tech Stack / sync scripts",
+      "weight": 1.0,
+      "source": "agents_md_multi_platform_ai_agent_support",
+      "target": "agents_md_agent_instructions"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "[0.3.0]",
+      "weight": 1.0,
+      "source": "changelog_md_multi_url_support",
+      "target": "changelog_md_project_changelog"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/research/INSPECTION_GUIDE.md",
+      "source_location": "Phase 2",
+      "weight": 1.0,
+      "source": "docs_research_inspection_guide_md_component_inventory",
+      "target": "docs_research_inspection_guide_md_inspection_guide"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/research/INSPECTION_GUIDE.md",
+      "source_location": "Phase 1",
+      "weight": 1.0,
+      "source": "docs_research_inspection_guide_md_design_token_extraction",
+      "target": "docs_research_inspection_guide_md_inspection_guide"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Phase 1: Mandatory Interaction Sweep",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_mandatory_interaction_sweep",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Phase 5: Visual QA Diff",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_visual_qa_diff",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "Design Principles",
+      "weight": 1.0,
+      "source": "agents_md_pixel_perfect_cloning",
+      "target": "agents_md_agent_instructions"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "MOST IMPORTANT NOTES",
+      "weight": 1.0,
+      "source": "agents_md_worktree_parallel_build_pattern",
+      "target": "agents_md_agent_instructions"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Pre-Flight \u00a71",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_browser_mcp_requirement",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a72",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_complexity_budget_rule",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "line 14",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_foreman_pattern",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a74",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_foundation_first_principle",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a76",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_interaction_model_identification",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Guiding Principles \u00a78",
+      "weight": 1.0,
+      "source": "github_skills_clone_website_skill_md_spec_file_source_of_truth",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Not Intended For section",
+      "weight": 1.0,
+      "source": "readme_md_ethical_use_constraints",
+      "target": "readme_md_project_readme"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".aider.conf.yml",
+      "source_location": "read: - AGENTS.md",
+      "weight": 1.0,
+      "source": "_aider_conf",
+      "target": "agents_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".aider.conf.yml",
+      "source_location": "read: - docs/research/INSPECTION_GUIDE.md",
+      "weight": 1.0,
+      "source": "_aider_conf",
+      "target": "docs_research_inspection_guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".amazonq/rules/project.md",
+      "source_location": "AUTO-GENERATED from AGENTS.md \u2014 do not edit directly",
+      "weight": 1.0,
+      "source": "_amazonq_rules_project",
+      "target": "agents_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".amazonq/rules/project.md",
+      "source_location": "Run `bash scripts/sync-agent-rules.sh` to regenerate",
+      "weight": 1.0,
+      "source": "_amazonq_rules_project",
+      "target": "scripts_sync_agent_rules_sh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".augment/commands/clone-website.md",
+      "source_location": "AUTO-GENERATED from .claude/skills/clone-website/SKILL.md \u2014 do not edit directly",
+      "weight": 1.0,
+      "source": "_augment_commands_clone_website",
+      "target": "_claude_skills_clone_website_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".augment/commands/clone-website.md",
+      "source_location": "Run `node scripts/sync-skills.mjs` to regenerate",
+      "weight": 1.0,
+      "source": "_augment_commands_clone_website",
+      "target": "scripts_sync_skills_mjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Intro: foreman walking the job site; Phase 3 Step 3: Dispatch Builders in worktrees",
+      "weight": 1.0,
+      "source": "_claude_skills_clone_website_skill",
+      "target": "foreman_builder_parallel_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Phases 1-5 defining the full cloning pipeline",
+      "weight": 1.0,
+      "source": "_claude_skills_clone_website_skill",
+      "target": "clone_website_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Principle 8: Spec Files Are the Source of Truth; Phase 3 Step 2",
+      "weight": 1.0,
+      "source": "_claude_skills_clone_website_skill",
+      "target": "component_spec_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Scope Defaults: Fidelity level \u2014 pixel-perfect; Principle 1: Completeness Beats Speed",
+      "weight": 1.0,
+      "source": "_claude_skills_clone_website_skill",
+      "target": "pixel_perfect_cloning_principle"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".continue/commands/clone-website.md",
+      "source_location": "AUTO-GENERATED from .claude/skills/clone-website/SKILL.md \u2014 do not edit directly",
+      "weight": 1.0,
+      "source": "_continue_commands_clone_website",
+      "target": "_claude_skills_clone_website_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".continue/commands/clone-website.md",
+      "source_location": "Run `node scripts/sync-skills.mjs` to regenerate",
+      "weight": 1.0,
+      "source": "_continue_commands_clone_website",
+      "target": "scripts_sync_skills_mjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".continue/rules/project.md",
+      "source_location": "AUTO-GENERATED from AGENTS.md \u2014 do not edit directly",
+      "weight": 1.0,
+      "source": "_continue_rules_project",
+      "target": "agents_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".continue/rules/project.md",
+      "source_location": "Run `bash scripts/sync-agent-rules.sh` to regenerate",
+      "weight": 1.0,
+      "source": "_continue_rules_project",
+      "target": "scripts_sync_agent_rules_sh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".cursor/commands/clone-website.md",
+      "source_location": "AUTO-GENERATED from .claude/skills/clone-website/SKILL.md \u2014 do not edit directly",
+      "weight": 1.0,
+      "source": "_cursor_commands_clone_website",
+      "target": "_claude_skills_clone_website_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".cursor/commands/clone-website.md",
+      "source_location": "Run `node scripts/sync-skills.mjs` to regenerate",
+      "weight": 1.0,
+      "source": "_cursor_commands_clone_website",
+      "target": "scripts_sync_skills_mjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": "AUTO-GENERATED from AGENTS.md \u2014 do not edit directly",
+      "weight": 1.0,
+      "source": "_github_copilot_instructions",
+      "target": "agents_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/copilot-instructions.md",
+      "source_location": "Run `bash scripts/sync-agent-rules.sh` to regenerate",
+      "weight": 1.0,
+      "source": "_github_copilot_instructions",
+      "target": "scripts_sync_agent_rules_sh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "line 65 (@docs/research/INSPECTION_GUIDE.md)",
+      "weight": 1.0,
+      "source": "agents_md_agent_instructions",
+      "target": "docs_research_inspection_guide_md_inspection_guide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "claude_md_claude_config",
+      "target": "agents_md_agent_instructions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GEMINI.md",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "gemini_md_gemini_config",
+      "target": "agents_md_agent_instructions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Demo section",
+      "weight": 1.0,
+      "source": "readme_md_project_readme",
+      "target": "docs_design_references_comparison_png_visual_qa_comparison"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "Supported Platforms table",
+      "weight": 1.0,
+      "source": "readme_md_project_readme",
+      "target": "agents_md_multi_platform_ai_agent_support"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "source_location": "Both are structured GitHub issue templates for the same repository serving similar contribution workflows",
+      "weight": 1.0,
+      "source": "_github_issue_template_bug_report",
+      "target": "_github_issue_template_feature_request"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".github/copilot-setup-steps.yml",
+      "source_location": null,
+      "weight": 0.75,
+      "source": "github_copilot_setup_steps_yml_install_dependencies",
+      "target": "github_workflows_ci_yml_ci_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".github/skills/clone-website/SKILL.md",
+      "source_location": "Both describe structured per-component documentation artifacts",
+      "weight": 0.75,
+      "source": "github_skills_clone_website_skill_md_spec_file_source_of_truth",
+      "target": "docs_research_inspection_guide_md_component_inventory"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Spec files are exactly what the foreman produces before dispatching parallel builder agents",
+      "weight": 1.0,
+      "source": "component_spec_pattern",
+      "target": "foreman_builder_parallel_pattern"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/design-references/comparison.png",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "docs_design_references_comparison_png_visual_qa_comparison",
+      "target": "github_skills_clone_website_skill_md_visual_qa_diff"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".claude/skills/clone-website/SKILL.md",
+      "source_location": "Pixel-perfect fidelity is the explicit goal driving every phase of the cloning pipeline",
+      "weight": 1.0,
+      "source": "pixel_perfect_cloning_principle",
+      "target": "clone_website_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "AGENTS.md",
+      "source_location": "MOST IMPORTANT NOTES \u2014 worktree branches + merge",
+      "weight": 0.85,
+      "source": "agents_md_worktree_parallel_build_pattern",
+      "target": "github_skills_clone_website_skill_md_foreman_pattern"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/research/INSPECTION_GUIDE.md",
+      "source_location": "Phase 1 vs skill Global Extraction section",
+      "weight": 0.85,
+      "source": "docs_research_inspection_guide_md_design_token_extraction",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "CHANGELOG.md",
+      "source_location": "[0.3.0] Multi-URL support added to /clone-website",
+      "weight": 0.95,
+      "source": "changelog_md_multi_url_support",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".augment/commands/clone-website.md",
+      "source_location": "All auto-generated platform skill files instruct: edit .claude/skills/clone-website/SKILL.md then run sync-skills.mjs",
+      "weight": 1.0,
+      "source": "_claude_skills_clone_website_skill",
+      "target": "scripts_sync_skills_mjs"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".amazonq/rules/project.md",
+      "source_location": "All auto-generated platform rule files instruct: edit AGENTS.md then run sync-agent-rules.sh",
+      "weight": 1.0,
+      "source": "agents_md",
+      "target": "scripts_sync_agent_rules_sh"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".codex/skills/clone-website/SKILL.md",
+      "source_location": "Near-identical content and YAML frontmatter; same 5-phase methodology and all guiding principles",
+      "weight": 1.0,
+      "source": "_codex_skills_clone_website_skill",
+      "target": "_claude_skills_clone_website_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".opencode/commands/clone-website.md",
+      "source_location": "AUTO-GENERATED comment header",
+      "weight": 0.95,
+      "source": "opencode_commands_clone_website_md_clone_website_command",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".opencode/commands/clone-website.md",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "opencode_commands_clone_website_md_clone_website_command",
+      "target": "windsurf_workflows_clone_website_md_clone_website_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".windsurf/workflows/clone-website.md",
+      "source_location": "AUTO-GENERATED comment header",
+      "weight": 0.95,
+      "source": "windsurf_workflows_clone_website_md_clone_website_workflow",
+      "target": "github_skills_clone_website_skill_md_clone_website_skill"
     }
   ],
-  "hyperedges": [],
-  "built_at_commit": "d5ee0b36c48451bd73c459fa3e142371aead82ec"
+  "hyperedges": [
+    {
+      "id": "multi_platform_skill_distribution",
+      "label": "Multi-Platform Clone-Website Skill Distribution",
+      "nodes": [
+        "github_skills_clone_website_skill_md_clone_website_skill",
+        "opencode_commands_clone_website_md_clone_website_command",
+        "windsurf_workflows_clone_website_md_clone_website_workflow"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": ".opencode/commands/clone-website.md"
+    },
+    {
+      "id": "agent_instructions_single_source_of_truth",
+      "label": "Agent Instructions Single Source of Truth (AGENTS.md)",
+      "nodes": [
+        "agents_md_agent_instructions",
+        "claude_md_claude_config",
+        "gemini_md_gemini_config"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md"
+    },
+    {
+      "id": "platform_rule_files_from_agents_md",
+      "label": "Platform Rule Files Auto-Generated from AGENTS.md",
+      "nodes": [
+        "_amazonq_rules_project",
+        "_continue_rules_project",
+        "_github_copilot_instructions"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".amazonq/rules/project.md"
+    },
+    {
+      "id": "build_quality_gate_chain",
+      "label": "Build Quality Gate Chain (install, lint, typecheck, build)",
+      "nodes": [
+        "github_copilot_setup_steps_yml_install_dependencies",
+        "github_workflows_ci_yml_ci_workflow",
+        "github_skills_clone_website_skill_md_clone_website_skill"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": ".github/workflows/ci.yml"
+    },
+    {
+      "id": "github_contribution_templates",
+      "label": "GitHub Contribution Templates",
+      "nodes": [
+        "_github_issue_template_bug_report",
+        "_github_issue_template_feature_request",
+        "_github_pull_request_template",
+        "_github_issue_template_config"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml"
+    },
+    {
+      "id": "platform_clone_website_commands_from_skill",
+      "label": "Platform Clone-Website Commands Derived from Claude SKILL.md",
+      "nodes": [
+        "_augment_commands_clone_website",
+        "_continue_commands_clone_website",
+        "_cursor_commands_clone_website",
+        "_codex_skills_clone_website_skill"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": ".augment/commands/clone-website.md"
+    }
+  ],
+  "built_at_commit": "6e9a4ae18e83b20e8fd1cb171a96b4f3b2eecb5e"
 }
